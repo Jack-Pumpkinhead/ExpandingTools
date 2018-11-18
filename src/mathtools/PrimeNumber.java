@@ -102,7 +102,16 @@ public class PrimeNumber {
         }
         for (int i = size - 1; i >= 0; i--) {
             list.remove(Helper.integerBinarySearch(list, list.get(i) * p));
+//            System.out.println("remove " + list.get(i));
         }
+        /*int j = size - 1;
+        for (int i = list.size()-1; i >= 0; i--) {
+            if (list.get(i) == list.get(j) * p) {
+                list.remove(i);
+                j--;
+            }
+
+        }*/
         product *= p;
         primeList.add(p);
     }
@@ -125,10 +134,12 @@ public class PrimeNumber {
                     product *= p;
                 } while (product <= limit);
             }
+//            System.out.println("num " + numberField.get(i));
         }
     }
     private int i ;
     private int j ;
     private int startI ;
     private int sieved ;
+
 }
